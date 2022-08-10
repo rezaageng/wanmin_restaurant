@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../screens/category_food.dart';
+
 class CategoryItem extends StatelessWidget {
   final String title;
   final Color color;
@@ -12,22 +14,31 @@ class CategoryItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16),
-        gradient: LinearGradient(
-          colors: [
-            color.withOpacity(0.7),
-            color,
-          ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
+    return InkWell(
+      onTap: () => Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (_) => const CategoryFood(),
         ),
       ),
-      child: Text(
-        title,
-        style: Theme.of(context).textTheme.headline6,
+      splashColor: color,
+      borderRadius: BorderRadius.circular(16),
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(16),
+          gradient: LinearGradient(
+            colors: [
+              color.withOpacity(0.7),
+              color,
+            ],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+        ),
+        child: Text(
+          title,
+          style: Theme.of(context).textTheme.headline6,
+        ),
       ),
     );
   }
