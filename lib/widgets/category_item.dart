@@ -5,11 +5,13 @@ import '../screens/category_food.dart';
 class CategoryItem extends StatelessWidget {
   final String title;
   final Color color;
+  final String image;
 
   const CategoryItem({
     Key? key,
     required this.title,
     required this.color,
+    required this.image,
   }) : super(key: key);
 
   @override
@@ -34,6 +36,12 @@ class CategoryItem extends StatelessWidget {
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
+          ),
+          image: DecorationImage(
+            image: AssetImage(image),
+            opacity: 0.2,
+            alignment: Alignment.bottomRight,
+            scale: 1.8,
           ),
         ),
         child: Text(
