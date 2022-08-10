@@ -22,6 +22,7 @@ class CategoryItem extends StatelessWidget {
       ),
       splashColor: color,
       borderRadius: BorderRadius.circular(16),
+      enableFeedback: false,
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
