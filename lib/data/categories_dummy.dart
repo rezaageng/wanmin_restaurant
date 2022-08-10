@@ -5,19 +5,19 @@ import '../models/category_model.dart';
 const List<CategoryModel> dummyCategories = [
   CategoryModel(
     id: 'c1',
-    name: 'Mondstadt',
+    name: 'Mondstadt Dishes',
     color: Colors.teal,
     image: 'assets/images/category_mondo.png',
   ),
   CategoryModel(
     id: 'c2',
-    name: 'Liyue',
+    name: 'Liyue Dishes',
     color: Colors.amber,
     image: 'assets/images/category_liyue.png',
   ),
   CategoryModel(
     id: 'c3',
-    name: 'Inazuma',
+    name: 'Inazuma Dishes',
     color: Colors.purple,
     image: 'assets/images/category_inazuma.png',
   ),
@@ -29,13 +29,13 @@ const List<CategoryModel> dummyCategories = [
   ),
   CategoryModel(
     id: 'c5',
-    name: 'ATK Boosting',
+    name: 'ATK Boosting Dishes',
     color: Colors.red,
     image: 'assets/images/category_atk.png',
   ),
   CategoryModel(
     id: 'c6',
-    name: 'DEF Boosting',
+    name: 'DEF Boosting Dishes',
     color: Colors.blue,
     image: 'assets/images/category_def.png',
   ),
