@@ -5,12 +5,17 @@ class CategoryFood extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final routeArgs =
+        ModalRoute.of(context)!.settings.arguments as Map<String, String>;
+    final id = routeArgs['id'];
+    final title = routeArgs['title'];
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Food'),
+        title: Text(title!),
       ),
       body: const Center(
-        child: Text('Paimon is emergency food'),
+        child: Text('Paimon is an emergency food'),
       ),
     );
   }

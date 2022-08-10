@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'screens/categories.dart';
+import 'screens/category_food.dart';
 import 'theme/dark_theme.dart';
 import 'theme/light_theme.dart';
 
@@ -20,6 +21,9 @@ class MyApp extends StatelessWidget {
       darkTheme: darkTheme,
       themeMode: ThemeMode.system,
       home: const CategoriesScreen(),
+      routes: {
+        '/category-food': (context) => const CategoryFood(),
+      },
     );
   }
 }

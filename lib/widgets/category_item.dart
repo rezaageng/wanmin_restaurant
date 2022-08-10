@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-import '../screens/category_food.dart';
-
 class CategoryItem extends StatelessWidget {
+  final String id;
   final String title;
   final Color color;
   final String image;
 
   const CategoryItem({
     Key? key,
+    required this.id,
     required this.title,
     required this.color,
     required this.image,
@@ -17,10 +17,12 @@ class CategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (_) => const CategoryFood(),
-        ),
+      onTap: () => Navigator.of(context).pushNamed(
+        '/category-food',
+        arguments: {
+          'id': id,
+          'title': title,
+        },
       ),
       splashColor: color,
       borderRadius: BorderRadius.circular(16),
