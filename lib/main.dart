@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wanmin_restaurant/screens/categories.dart';
+
+import 'screens/categories.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,10 +11,29 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: CategoriesScreen(),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.indigo),
+        appBarTheme: const AppBarTheme(
+          color: Colors.white,
+          foregroundColor: Colors.black,
+          elevation: 0,
+        ),
+        textTheme: const TextTheme(
+          headline6: TextStyle(color: Colors.white),
+        ),
+        fontFamily: 'NotoSansJP',
+      ),
+      darkTheme: ThemeData(
+        colorScheme: const ColorScheme.dark(),
+        appBarTheme: const AppBarTheme(color: Colors.black, elevation: 0),
+        canvasColor: Colors.black,
+        fontFamily: 'NotoSansJP',
+      ),
+      themeMode: ThemeMode.system,
+      home: const CategoriesScreen(),
     );
   }
 }
