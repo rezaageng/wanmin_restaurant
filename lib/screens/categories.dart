@@ -13,10 +13,11 @@ class CategoriesScreen extends StatelessWidget {
         title: const Text('Wanmin Restaurant'),
       ),
       body: GridView(
+        physics: const BouncingScrollPhysics(),
         padding: const EdgeInsets.all(8),
         gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: 240,
-          childAspectRatio: 3 / 2,
+          childAspectRatio: 1,
           crossAxisSpacing: 8,
           mainAxisSpacing: 8,
         ),
