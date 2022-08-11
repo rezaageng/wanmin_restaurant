@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:wanmin_restaurant/data/food_dummy.dart';
-import 'package:wanmin_restaurant/widgets/food_item.dart';
+
+import '../data/food_dummy.dart';
+import '../widgets/food_item.dart';
 
 class CategoryFood extends StatelessWidget {
   static const String routeName = '/category-food';
