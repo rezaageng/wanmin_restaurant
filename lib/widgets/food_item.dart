@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wanmin_restaurant/models/food_models.dart';
+import '../models/food_models.dart';
 
 class FoodItem extends StatelessWidget {
   final String id;
@@ -60,7 +60,16 @@ class FoodItem extends StatelessWidget {
                 topRight: Radius.circular(16),
               ),
               child: Container(
-                color: rarityMap['color'] as Color,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [
+                      (rarityMap['color'] as Color).withOpacity(0.7),
+                      rarityMap['color'] as Color,
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                ),
                 child: Image.network(
                   imageUrl,
                   height: 256,
