@@ -13,7 +13,7 @@ ThemeData lightTheme = ThemeData(
     ),
   ),
   textTheme: const TextTheme(
-    headline6: TextStyle(color: Colors.white),
+    headline6: TextStyle(color: Colors.black),
   ),
   fontFamily: 'NotoSansJP',
 );
