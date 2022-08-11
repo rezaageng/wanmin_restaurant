@@ -213,5 +213,29 @@ const List<FoodModel> foodDummy = [
     rarity: Rarity.threeStars,
     isSpecial: false,
     isExlusive: true,
-  )
+  ),
+  FoodModel(
+    id: 'f18',
+    categories: ['c4'],
+    title: 'Frosting Essential Oil',
+    imgUrl:
+        'https://static.wikia.nocookie.net/gensin-impact/images/4/46/Item_Frosting_Essential_Oil.png/revision/latest?cb=20210109221111',
+    effect: 'Increases all party members\' Cryo DMG by 25% for 300s',
+    ingredients: ['1 Lizard Tail', '1 Mist Flower Corolla', '100 Mora'],
+    rarity: Rarity.threeStars,
+    isSpecial: false,
+    isExlusive: false,
+  ),
+  FoodModel(
+    id: 'f19',
+    categories: ['c4'],
+    title: 'Gushing Essential Oil',
+    imgUrl:
+        'https://static.wikia.nocookie.net/gensin-impact/images/d/d9/Item_Gushing_Essential_Oil.png/revision/latest?cb=20210109221048',
+    effect: 'Increases all party members\' Anemo DMG by 25% for 300s.',
+    ingredients: ['1 Lizard Tail', '1 Dendelion Seed', '100 Mora'],
+    rarity: Rarity.threeStars,
+    isSpecial: false,
+    isExlusive: false,
+  ),
 ];
