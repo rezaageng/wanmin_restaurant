@@ -92,7 +92,8 @@ const List<FoodModel> foodDummy = [
     id: 'f8',
     categories: ['c2', 'c5'],
     title: 'Almond Tofu',
-    imgUrl: 'image.png',
+    imgUrl:
+        'https://static.wikia.nocookie.net/gensin-impact/images/5/5f/Item_Almond_Tofu.png/revision/latest?cb=20210216225709',
     effect:
         'A dessert made out of almond. It has a silky-smooth texture with a long-lasting aroma of almond. It\'s named tofu only because of its tofu-like shape.',
     ingredients: ['3 Milk', '1 Sugar', '1 Almond'],
@@ -104,7 +105,8 @@ const List<FoodModel> foodDummy = [
     id: 'f9',
     categories: ['c2', 'c6'],
     title: 'Golden Crab',
-    imgUrl: 'image.png',
+    imgUrl:
+        'https://static.wikia.nocookie.net/gensin-impact/images/a/a3/Item_Golden_Crab.png/revision/latest?cb=20210415145849',
     effect:
         'Increases all party members\' DEF by 261 and healing effects by 8% for 300s.',
     ingredients: ['5 Bird Egg', '5 Flour', '4 Crab', '2 Salt'],
