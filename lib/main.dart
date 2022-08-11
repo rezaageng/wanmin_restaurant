@@ -20,9 +20,9 @@ class MyApp extends StatelessWidget {
       theme: lightTheme,
       darkTheme: darkTheme,
       themeMode: ThemeMode.system,
-      home: const CategoriesScreen(),
       routes: {
-        '/category-food': (context) => const CategoryFood(),
+        '/': (context) => const CategoriesScreen(),
+        CategoryFood.routeName: (context) => const CategoryFood(),
       },
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../screens/category_food.dart';
 
 class CategoryItem extends StatelessWidget {
   final String id;
@@ -18,7 +19,7 @@ class CategoryItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () => Navigator.of(context).pushNamed(
-        '/category-food',
+        CategoryFood.routeName,
         arguments: {
           'id': id,
           'title': title,

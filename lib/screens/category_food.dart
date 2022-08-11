@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CategoryFood extends StatelessWidget {
+  static const String routeName = '/category-food';
+
   const CategoryFood({Key? key}) : super(key: key);
 
   @override
