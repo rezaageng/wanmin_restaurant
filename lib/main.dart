@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'screens/food_detail.dart';
 
 import 'screens/categories.dart';
 import 'screens/category_food.dart';
+import 'screens/food_detail.dart';
 import 'theme/dark_theme.dart';
 import 'theme/light_theme.dart';
 
@@ -26,6 +26,9 @@ class MyApp extends StatelessWidget {
         CategoryFood.routeName: (context) => const CategoryFood(),
         FoodDetail.routeName: (context) => const FoodDetail(),
       },
+      onUnknownRoute: (settings) => MaterialPageRoute(
+        builder: (context) => const CategoriesScreen(),
+      ),
     );
   }
 }
