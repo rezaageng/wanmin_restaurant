@@ -1,3 +1,9 @@
 {
-  "conventionalCommits.scopes": ["models", "config", "categories", "assets"]
+  "conventionalCommits.scopes": [
+    "models",
+    "config",
+    "categories",
+    "assets",
+    "food"
+  ]
 }

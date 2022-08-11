@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:wanmin_restaurant/data/food_dummy.dart';
+import 'package:wanmin_restaurant/widgets/food_item.dart';
 
 class CategoryFood extends StatelessWidget {
   static const String routeName = '/category-food';
@@ -9,15 +11,28 @@ class CategoryFood extends StatelessWidget {
   Widget build(BuildContext context) {
     final routeArgs =
         ModalRoute.of(context)!.settings.arguments as Map<String, String>;
+
     final id = routeArgs['id'];
     final title = routeArgs['title'];
+
+    final categoryFood =
+        foodDummy.where((food) => food.categories.contains(id)).toList();
 
     return Scaffold(
       appBar: AppBar(
         title: Text(title!),
       ),
-      body: const Center(
-        child: Text('Paimon is an emergency food'),
+      body: ListView.builder(
+        physics: const BouncingScrollPhysics(),
+        itemBuilder: (context, index) {
+          return FoodItem(
+            id: categoryFood[index].id,
+            title: categoryFood[index].title,
+            imageUrl: categoryFood[index].imgUrl,
+            rarity: categoryFood[index].rarity,
+          );
+        },
+        itemCount: categoryFood.length,
       ),
     );
   }
