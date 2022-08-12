@@ -45,12 +45,20 @@ class FoodDetail extends StatelessWidget {
             Container(
               width: double.infinity,
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+              margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+              decoration: BoxDecoration(
+                color: Theme.of(context).cardColor,
+                borderRadius: BorderRadius.circular(16),
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text(
-                    'Ingredients',
-                    style: Theme.of(context).textTheme.titleLarge,
+                  Container(
+                    margin: const EdgeInsets.only(bottom: 8),
+                    child: Text(
+                      'Ingredients',
+                      style: Theme.of(context).textTheme.titleLarge,
+                    ),
                   ),
                   ...dish.ingredients
                       .map((ingredient) => Text('• $ingredient'))
