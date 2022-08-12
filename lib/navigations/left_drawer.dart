@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../screens/filter.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({Key? key}) : super(key: key);
@@ -11,7 +12,6 @@ class LeftDrawer extends StatelessWidget {
           children: [
             const SizedBox(
               width: double.infinity,
-              // height: 168,
               child: DrawerHeader(
                 decoration: BoxDecoration(
                   color: Colors.blue,
@@ -28,16 +28,13 @@ class LeftDrawer extends StatelessWidget {
               title: const Text(
                 'Dish',
               ),
-              onTap: () {
-                Navigator.pop(context);
-              },
+              onTap: () => Navigator.of(context).pushReplacementNamed('/'),
             ),
             ListTile(
               leading: const Icon(Icons.short_text),
               title: const Text('Filter'),
-              onTap: () {
-                Navigator.pop(context);
-              },
+              onTap: () =>
+                  Navigator.of(context).pushReplacementNamed(Filter.routeName),
             ),
           ],
         ),

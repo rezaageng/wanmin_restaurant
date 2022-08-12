@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wanmin_restaurant/navigations/left_drawer.dart';
 
+import 'left_drawer.dart';
 import '../screens/categories.dart';
 import '../screens/favorite_screen.dart';
 
