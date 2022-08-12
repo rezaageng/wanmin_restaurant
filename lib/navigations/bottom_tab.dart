@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wanmin_restaurant/navigations/left_drawer.dart';
 
 import '../screens/categories.dart';
 import '../screens/favorite_screen.dart';
@@ -30,6 +31,7 @@ class _BottomTabState extends State<BottomTab> {
       appBar: AppBar(
         title: Text(_screens[_screenIndex]['title'] as String),
       ),
+      drawer: const LeftDrawer(),
       body: _screens[_screenIndex]['screen'] as Widget,
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _screenIndex,
