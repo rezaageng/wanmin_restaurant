@@ -6,6 +6,7 @@
     "assets",
     "food",
     "theme",
-    "routes"
+    "routes",
+    "navigation"
   ]
 }
