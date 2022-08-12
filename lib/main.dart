@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wanmin_restaurant/navigations/top_tab.dart';
 
+import 'navigations/bottom_tab.dart';
 import 'screens/categories.dart';
 import 'screens/category_food.dart';
 import 'screens/food_detail.dart';
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       darkTheme: darkTheme,
       themeMode: ThemeMode.system,
       routes: {
-        '/': (context) => const TopTab(),
+        '/': (context) => const BottomTab(),
         CategoryFood.routeName: (context) => const CategoryFood(),
         FoodDetail.routeName: (context) => const FoodDetail(),
       },
