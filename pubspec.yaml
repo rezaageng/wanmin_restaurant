@@ -65,6 +65,7 @@ flutter:
     - assets/images/category_def.png
     - assets/images/category_recovery.png
     - assets/images/category_adventure.png
+    - assets/images/drawer_bg.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
