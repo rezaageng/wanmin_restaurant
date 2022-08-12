@@ -3,14 +3,9 @@ import 'package:flutter/material.dart';
 import '../screens/categories.dart';
 import '../screens/favorite_screen.dart';
 
-class TopTab extends StatefulWidget {
+class TopTab extends StatelessWidget {
   const TopTab({Key? key}) : super(key: key);
 
-  @override
-  State<TopTab> createState() => _TopTabState();
-}
-
-class _TopTabState extends State<TopTab> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
