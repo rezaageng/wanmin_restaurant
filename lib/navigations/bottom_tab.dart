@@ -30,6 +30,13 @@ class _BottomTabState extends State<BottomTab> {
     return Scaffold(
       appBar: AppBar(
         title: Text(_screens[_screenIndex]['title'] as String),
+        leading: Builder(
+          builder: (context) => IconButton(
+            icon: const Icon(Icons.menu),
+            onPressed: () => Scaffold.of(context).openDrawer(),
+            enableFeedback: false,
+          ),
+        ),
       ),
       drawer: const LeftDrawer(),
       body: _screens[_screenIndex]['screen'] as Widget,

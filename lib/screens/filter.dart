@@ -12,6 +12,13 @@ class Filter extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Filter'),
+        leading: Builder(
+          builder: (context) => IconButton(
+            icon: const Icon(Icons.menu),
+            onPressed: () => Scaffold.of(context).openDrawer(),
+            enableFeedback: false,
+          ),
+        ),
       ),
       drawer: const LeftDrawer(),
       body: const Center(

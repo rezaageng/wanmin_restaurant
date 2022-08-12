@@ -21,6 +21,11 @@ class CategoryFood extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          enableFeedback: false,
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context),
+        ),
         title: Text(title!),
       ),
       body: ListView.builder(

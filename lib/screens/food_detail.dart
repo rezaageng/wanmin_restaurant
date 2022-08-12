@@ -15,6 +15,11 @@ class FoodDetail extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(dish.title),
+        leading: IconButton(
+          onPressed: () => Navigator.pop(context),
+          enableFeedback: false,
+          icon: const Icon(Icons.arrow_back),
+        ),
       ),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),

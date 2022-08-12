@@ -55,6 +55,7 @@ class FoodItem extends StatelessWidget {
       child: InkWell(
         onTap: () => Navigator.of(context)
             .pushNamed(FoodDetail.routeName, arguments: id),
+        enableFeedback: false,
         borderRadius: BorderRadius.circular(16),
         child: Column(
           children: [

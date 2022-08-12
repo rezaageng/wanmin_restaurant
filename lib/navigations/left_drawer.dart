@@ -24,6 +24,7 @@ class LeftDrawer extends StatelessWidget {
               ),
             ),
             ListTile(
+              enableFeedback: false,
               leading: const Icon(Icons.restaurant),
               title: const Text(
                 'Dish',
@@ -31,6 +32,7 @@ class LeftDrawer extends StatelessWidget {
               onTap: () => Navigator.of(context).pushReplacementNamed('/'),
             ),
             ListTile(
+              enableFeedback: false,
               leading: const Icon(Icons.short_text),
               title: const Text('Filter'),
               onTap: () =>
