@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:wanmin_restaurant/models/food_models.dart';
 
 import '../data/food_dummy.dart';
+import '../models/food_models.dart';
 import '../widgets/food_item.dart';
 
 class CategoryFood extends StatefulWidget {
