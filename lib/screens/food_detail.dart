@@ -74,6 +74,10 @@ class FoodDetail extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Navigator.of(context).pop(dish.id),
+        child: const Icon(Icons.hide_source),
+      ),
     );
   }
 }

@@ -8,6 +8,7 @@ class FoodItem extends StatelessWidget {
   final String title;
   final String imageUrl;
   final Rarity rarity;
+  final Function hideFood;
 
   const FoodItem({
     Key? key,
@@ -15,6 +16,7 @@ class FoodItem extends StatelessWidget {
     required this.title,
     required this.imageUrl,
     required this.rarity,
+    required this.hideFood,
   }) : super(key: key);
 
   Map<String, Object> get rarityMap {
@@ -47,14 +49,25 @@ class FoodItem extends StatelessWidget {
     }
   }
 
+  void _selectFood(BuildContext context) async {
+    Future result = Navigator.of(context).pushNamed(
+      FoodDetail.routeName,
+      arguments: id,
+    );
+
+    final String? food = await result;
+    if (food != null) {
+      hideFood(food);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Card(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       elevation: 4,
       child: InkWell(
-        onTap: () => Navigator.of(context)
-            .pushNamed(FoodDetail.routeName, arguments: id),
+        onTap: () => _selectFood(context),
         enableFeedback: false,
         borderRadius: BorderRadius.circular(16),
         child: Column(
